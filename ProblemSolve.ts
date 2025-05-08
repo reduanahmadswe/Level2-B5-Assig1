@@ -6,6 +6,7 @@ function formatString(input: string, toUpper: boolean = true): string {
     }
 }
 
+
 function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
 
     return items.filter(item => item.rating >= 4);
@@ -40,8 +41,8 @@ class Vehicle {
         this.year = year;
     }
 
-    public getInfo(): string {
-        return `Make: ${this.make}, Year: ${this.year}`;
+    public getInfo(): void {
+        console.log(`Make: ${this.make}, Year: ${this.year}`);
     }
 }
 
@@ -55,8 +56,8 @@ class Car extends Vehicle {
         this.model = model;
     }
 
-    getModel(): string {
-        return `Model: ${this.model}`;
+    getModel(): void {
+       console.log(`Model: ${this.model}`);
     }
 }
 
