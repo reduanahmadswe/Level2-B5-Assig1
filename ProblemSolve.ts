@@ -18,13 +18,13 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     const result: T[] = [];
 
     for (let i = 0; i < arrays.length; i++) {
-        const borthomanArray = arrays[i];
-        for (let j = 0; j < borthomanArray.length; j++) {
+        const currentArray = arrays[i];
+        for (let j = 0; j < currentArray.length; j++) {
 
-            result.push(borthomanArray[j]);
+            result.push(currentArray[j]);
 
         }
-    }
+    } 
 
     return result;
 }
@@ -33,19 +33,18 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 
 class Vehicle {
     private make: string;
-    private year: number;
+    public year: number;
 
     constructor(make: string, year: number) {
         this.make = make;
         this.year = year;
     }
 
-    getInfo(): string {
-
+    public getInfo(): string {
         return `Make: ${this.make}, Year: ${this.year}`;
-
     }
 }
+
 
 class Car extends Vehicle {
 
